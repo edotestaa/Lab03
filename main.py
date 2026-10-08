@@ -20,7 +20,8 @@ def main():
 
         if scelta == "1":
             nuovo_responsabile = input("Inserisci il nuovo responsabile: ")
-            # TODO: Aggiorna responsabile nel sistema
+            DepositoStrumenti.responsabile = nuovo_responsabile
+            print("Responsabile aggiornato correttamente")
 
         elif scelta == "2":
             while True:
@@ -44,7 +45,7 @@ def main():
             print(f"Strumento aggiunto: {strumento}")
 
         elif scelta == "4":
-            strumenti_ordinati = deposito.strumenti_ordinati_per_marca()
+            strumenti_ordinati = (deposito.strumenti_ordinati_per_marca())
             for s in strumenti_ordinati:
                 print(f'- {s}')
 
